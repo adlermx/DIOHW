@@ -4,7 +4,21 @@ package com.diosoft;
  * Created by adler on 11.12.2014.
  */
 public class PersonImpl implements Person {
+
+    private final String company = "DioSoft";
     private String firstName;
+    private String secondName;
+    private int age;
+    private JobTitle title;
+
+
+    public PersonImpl(String firstName, String secondName, int age, JobTitle title) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.age = age;
+        this.title = title;
+    }
+
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -21,19 +35,6 @@ public class PersonImpl implements Person {
     public void setTitle(JobTitle title) {
         this.title = title;
     }
-
-    private String secondName;
-    private int age;
-    private JobTitle title;
-
-
-    public PersonImpl(String firstName, String secondName, int age, JobTitle title) {
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.age = age;
-        this.title = title;
-    }
-
 
 
     @Override
@@ -83,7 +84,8 @@ public class PersonImpl implements Person {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("PersonImpl{");
-        sb.append("firstName='").append(firstName).append('\'');
+        sb.append("company='").append(company).append('\'');
+        sb.append(", firstName='").append(firstName).append('\'');
         sb.append(", secondName='").append(secondName).append('\'');
         sb.append(", age=").append(age);
         sb.append(", title=").append(title);
