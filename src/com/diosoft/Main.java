@@ -3,20 +3,19 @@ package com.diosoft;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        String firstArgument = args[0];
 
-        System.out.println("This is 1st argument "+firstArgument);
+        PersonImpl person1 = new PersonImpl("Adler","Makhsudov",31,JobTitle.DEVELOPER);
+//        person1.setAge(32);
+        PersonImpl person2 = new PersonImpl("Adler","Makhsudov",31,JobTitle.DEVELOPER);
+        /*new PersonImpl("Super","Men",111,JobTitle.DIRECTOR);*/
 
-        System.out.println("---------List of Arguments----------");
-        for (int i = 0; i <= args.length-1; i++) {
-            System.out.println(args[i]);
-        }
+        doEquals(person1, person2);
 
-        System.out.println("---------Quantity of Arguments----------");
-        int quantity = args.length;
-
-        System.out.println(quantity);
-
+    }
+    private static void doEquals(Person person1, Person person2){
+        System.out.println("== " + (person1==(person2)));
+        System.out.println("is equals " + person1.equals(person2));
+        System.out.println(person1);
+        System.out.println(person2);
     }
 }
