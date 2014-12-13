@@ -3,7 +3,7 @@ package com.diosoft;
 public class Main {
 
     public static void main(String[] args) {
-
+        //local code review (vtegza): clean up code- remove comments @ 12/13/2014
         PersonImpl person1 = new PersonImpl("Adler","Makhsudov",31,JobTitle.DEVELOPER);
 //        person1.setAge(32);
         PersonImpl person2 = new PersonImpl("Adler","Makhsudov",31,JobTitle.DEVELOPER);

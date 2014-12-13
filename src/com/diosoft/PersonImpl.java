@@ -5,6 +5,8 @@ package com.diosoft;
  */
 public class PersonImpl implements Person {
 
+    //local code review (vtegza): make or variables final for this POJO @ 12/13/2014
+    //local code review (vtegza): normally should not have constants @ 12/13/2014
     private final String company = "DioSoft";
     private String firstName;
     private String secondName;
